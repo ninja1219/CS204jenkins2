@@ -1,4 +1,3 @@
-
 class Calculator {
 
     Calculator(){
@@ -39,7 +38,22 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n){
-        return 0;
+        int twoBackNum = 0;
+        int oneBackNum = 1;
+        if (n == 0) {
+            return twoBackNum;
+        } else if (n == 1) {
+            return oneBackNum;
+        }
+
+        int currNum = 0;
+        for (int i = 2; i <= n; i++) {
+            currNum = twoBackNum + oneBackNum;
+            twoBackNum = oneBackNum;
+            oneBackNum = currNum;
+        }
+
+        return currNum;
     }
 
 
@@ -51,7 +65,7 @@ class Calculator {
     if int a = 16 then this method returns: 10000
      */
     String intToBinaryNumber(int n){
-        return null;
+        return Integer.toBinaryString(n);
     }
 
     /*
@@ -63,8 +77,15 @@ class Calculator {
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
     String createUniqueID(String n){
+        StringBuilder id = new StringBuilder(n);
+        Character[] alphabet ={'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
-        return null;
+        for (int i = 0; i < 5; i++) {
+            int randNum = (int)(Math.random() * 27);
+            id.append(alphabet[randNum]);
+        }
+
+        return id.toString();
     }
 
 
