@@ -81,7 +81,7 @@ class Calculator {
         Character[] alphabet ={'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
         for (int i = 0; i < 5; i++) {
-            int randNum = (int)(Math.random() * 27);
+            int randNum = (int)(Math.random() * 26);
             id.append(alphabet[randNum]);
         }
 
