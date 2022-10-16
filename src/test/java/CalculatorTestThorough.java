@@ -19,7 +19,6 @@ public class CalculatorTestThorough {
 
     }
 
-
     @Test
     public void subtractTest(){
         Calculator myCalculator = new Calculator();
