@@ -40,7 +40,6 @@ public class CalculatorTestThorough {
 
     }
 
-
     @Test
     public void divideTest(){
         Calculator myCalculator = new Calculator();
